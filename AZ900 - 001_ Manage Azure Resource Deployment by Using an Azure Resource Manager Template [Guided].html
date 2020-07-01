@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<!-- saved from url=(0083)https://labclient.labondemand.com/Instructions/a52e0ae9-b4ca-42ff-b713-a729886e8d43 -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>AZ900 - 001: Manage Azure Resource Deployment by Using an Azure Resource Manager Template [Guided] </title>
+    <link rel="shortcut icon" href="https://labclient.labondemand.com/images/favicon.ico">
+    <script src="./AZ900 - 001_ Manage Azure Resource Deployment by Using an Azure Resource Manager Template [Guided]_files/jquery.min.js.download"></script>
+    <script src="./AZ900 - 001_ Manage Azure Resource Deployment by Using an Azure Resource Manager Template [Guided]_files/jquery-ui.min.js.download"></script>
+    <script src="./AZ900 - 001_ Manage Azure Resource Deployment by Using an Azure Resource Manager Template [Guided]_files/showdown.min.js.download"></script>
+    <link rel="stylesheet" type="text/css" href="./AZ900 - 001_ Manage Azure Resource Deployment by Using an Azure Resource Manager Template [Guided]_files/prettify.css">
+    <script src="./AZ900 - 001_ Manage Azure Resource Deployment by Using an Azure Resource Manager Template [Guided]_files/yaml.min.js.download"></script>
+    <script src="./AZ900 - 001_ Manage Azure Resource Deployment by Using an Azure Resource Manager Template [Guided]_files/jquery.timepicker.min.js.download"></script>
+    <link rel="stylesheet" type="text/css" href="./AZ900 - 001_ Manage Azure Resource Deployment by Using an Azure Resource Manager Template [Guided]_files/jquery.timepicker.css">
+    <script src="./AZ900 - 001_ Manage Azure Resource Deployment by Using an Azure Resource Manager Template [Guided]_files/saved_resource"></script>
+    <script src="./AZ900 - 001_ Manage Azure Resource Deployment by Using an Azure Resource Manager Template [Guided]_files/saved_resource(1)"></script>
+    <link href="./AZ900 - 001_ Manage Azure Resource Deployment by Using an Azure Resource Manager Template [Guided]_files/jquery-ui.css" rel="stylesheet">
+    <link href="./AZ900 - 001_ Manage Azure Resource Deployment by Using an Azure Resource Manager Template [Guided]_files/LabClient.css" rel="stylesheet" type="text/css">
+    <link id="themeStylesheet" href="./AZ900 - 001_ Manage Azure Resource Deployment by Using an Azure Resource Manager Template [Guided]_files/Blue.css" rel="stylesheet">
+
+        <style>
+            #page0 { 
+    text-align:center; 
+    padding:15px 20px;        
+}
+#page0 .overviewbutton{
+    background-color: #0078d7;
+    color: white;  
+    padding: 5px;
+    margin: 0px;
+    font-size: 23px;
+    border-radius: 4px;
+    font-family: arial;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+#page0 details,blockquote{
+    
+    text-align: left;
+    margin: 5px 0px;    
+}
+#page0 details h1,h2,h3,h4{
+    margin: 0px 5px;
+}
+#page0 details p{
+    margin: 0px 10px;
+}
+#page0 img {display:inline;}
+#page0 h1 {
+    font-weight: normal;
+    border-bottom: solid 1px;
+    margin:20px 0; 
+    font-size:28px; 
+    border-top: solid 1px; 
+    padding:20px 0;        
+}
+//#page0 a { font-size:18px; padding:12px 16px; color:#fff; background-color:#0078d7; }
+//#page0 a:hover { text-decoration: none; background-color:rgba(0, 120, 215, .8); }
+#page0 h2 {margin-top:30px;}
+#page0 table { margin-left:auto; margin-right:auto;}  
+#page0 table tr {border:none;} 
+#page0 table td {padding:3px 3px; text-align:left;}  
+#page0 .knowledgeLink:before {margin-right:5px;}
+div[class*='logo-'] {
+    max-width: 100%;
+    min-height:225px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.logo-guided{background-image:url(https://lodmanuals.blob.core.windows.net/lms/2020%20Challenge%20Labs%20Graphics/Challenge-Labs-Guided-16x9v1.1.jpg);max-width: 100%;}
+.logo-advanced{background-image:url(https://lodmanuals.blob.core.windows.net/lms/2020%20Challenge%20Labs%20Graphics/Challenge-Labs-Advanced-16x9.jpg);max-width: 100%;}
+.logo-expert{background-image:url(https://lodmanuals.blob.core.windows.net/lms/2020%20Challenge%20Labs%20Graphics/Challenge-Labs-Expert-16x9.jpg);max-width: 100%;}
+.logo-getting-started{background-image:url(https://lodmanuals.blob.core.windows.net/lms/2020%20Challenge%20Labs%20Graphics/Challenge-Labs-Getting-Started-16x9.jpg);max-width: 100%;}
+        </style>
+<script type="text/javascript">
+	
+    var appInsights=window.appInsights||function(a){
+        function b(a){c[a]=function(){var b=arguments;c.queue.push(function(){c[a].apply(c,b)})}}var c={config:a},d=document,e=window;setTimeout(function(){var b=d.createElement("script");b.src=a.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js",d.getElementsByTagName("script")[0].parentNode.appendChild(b)});try{c.cookie=d.cookie}catch(a){}c.queue=[];for(var f=["Event","Exception","Metric","PageView","Trace","Dependency"];f.length;)b("track"+f.pop());if(b("setAuthenticatedUserContext"),b("clearAuthenticatedUserContext"),b("startTrackEvent"),b("stopTrackEvent"),b("startTrackPage"),b("stopTrackPage"),b("flush"),!a.disableExceptionTracking){f="onerror",b("_"+f);var g=e[f];e[f]=function(a,b,d,e,h){var i=g&&g(a,b,d,e,h);return!0!==i&&c["_"+f](a,b,d,e,h),i}}return c
+    }({
+        instrumentationKey: '48182b79-ae31-4e33-9bd4-3f470791932d'
+    });
+
+    window.appInsights=appInsights,appInsights.queue&&0===appInsights.queue.length&&appInsights.trackPageView();
+	
+    </script><script src="./AZ900 - 001_ Manage Azure Resource Deployment by Using an Azure Resource Manager Template [Guided]_files/ai.0.js.download"></script></head>
+<body>
+    <div id="labClient" style="">
+        <div id="header" role="banner">
+            <div id="labName" role="heading" aria-level="1">AZ900 - 001: Manage Azure Resource Deployment by Using an Azure Resource Manager Template [Guided] </div>
+            <div id="timerWrapper"><span id="timer">31 Minutes Remaining</span></div>
+            <div id="topNav">
+                <div id="notificationsButton" role="button" aria-label="Notifications" tabindex="0" aria-haspopup="true" aria-expanded="false"></div>
+                <div id="mainMenuButton" role="button" aria-label="Menu" tabindex="0" aria-haspopup="true" aria-expanded="false" title="Menu"></div>
+                <div id="mainMenu" style="display:none;">
+                        <div id="exit" tabindex="0" role="button" aria-label="End" class="menuItem">End</div>
+                    <div id="mainMenuExtensions"></div>
+                </div>
+            </div>
+        </div>
+
+        <div role="navigation">
+            <div id="tabHeadings" class="noselect" role="tablist">
+                    <div tabindex="0" class="tabHeading selected" aria-selected="true" role="tab" aria-label="Instructions" data-target="instructionsTab" data-id="0">Instructions</div>
+                    <div tabindex="0" class="tabHeading " aria-selected="false" role="tab" aria-label="Resources" data-target="resourcesTab" data-id="1">Resources</div>
+                    <div tabindex="0" class="tabHeading " aria-selected="false" role="tab" aria-label="Help" data-target="helpTab" data-id="2">Help</div>
+                <span id="zoomWrapper" class="zoomInHeader" style="">
+                    <input type="range" id="zoom" min="50" max="400" value="100" step="10" aria-label="Zoom" title="Zoom" aria-valuemin="50" aria-valuemax="400" aria-valuenow="100">
+                    <span id="zoomValue" style="display:inline-block; vertical-align: top; padding-top:3px; min-width:30px;">100%</span>
+                </span>
+            </div>
+        </div>
+
+        <div id="tabs" role="main">
+            <div id="instructionsTab" class="tab selected">
+                <div id="instructionsContent" class="tabContent withFooter instructions withNavigation" aria-label="Lab Instructions">
+                    <div class="zoomable" id="pages"><div class="page" id="page0"><style>
+strong {
+    color: black;
+}
+.help a {
+    text-decoration: underline;
+    text-decoration-style: wavy;  
+    text-decoration-color: red;
+    font-weight: bold;
+
+</style>
+<include src="https://raw.githubusercontent.com/LODSContent/Public-Templates/master/General/itpc-guided.md" data-name="guided"><div class="logo-guided">
+</div>
+<include src="./base-homepage.md" data-name=""><h1 id="instructionschallenge-name">
+<div class="instructionsblock" data-name="" ref="challenge-name">
+  <p>Manage Azure Resource Deployment by Using an Azure Resource Manager Template</p>
+</div></h1>
+<p><br></p>
+<p></p><details>
+<summary class="overviewbutton">Challenge Overview</summary><p></p>
+<p>
+</p><div class="instructionsblock" data-name="" ref="overview">
+  <h2 id="understand-the-scenario">Understand the scenario</h2>
+  <p>You are an Azure® administrator responsible for your organization’s Azure environment. You need to deploy resources by using Azure Resource Manager (ARM) templates. First, you will export an ARM template by using the Azure portal.  Next, you will use a custom template to deploy a virtual machine.  Finally, you will display the Azure API by using the Azure Resource Explorer.  </p>
+  <h2 id="understand-your-environment">Understand your environment</h2>
+  <p>You will be using a pre-created Azure account that contains a resource group named AZ900RGlod12811506 and a storage account named sa12811506.</p>
+</div><p></p>
+<p></p></details><p></p></include></include>
+<blockquote class="referenceContent" style="display:none;" data-id="challenge-name">
+  <p>Manage Azure Resource Deployment by Using an Azure Resource Manager Template</p>
+</blockquote>
+<blockquote class="referenceContent" style="display:none;" data-id="overview">
+  <h2 id="understand-the-scenario">Understand the scenario</h2>
+  <p>You are an Azure® administrator responsible for your organization’s Azure environment. You need to deploy resources by using Azure Resource Manager (ARM) templates. First, you will export an ARM template by using the Azure portal.  Next, you will use a custom template to deploy a virtual machine.  Finally, you will display the Azure API by using the Azure Resource Explorer.  </p>
+  <h2 id="understand-your-environment">Understand your environment</h2>
+  <p>You will be using a pre-created Azure account that contains a resource group named AZ900RGlod12811506 and a storage account named sa12811506.</p>
+</blockquote>
+<p></p></div><div class="page selected" id="page1">
+
+<include src="https://raw.githubusercontent.com/LODSContent/ChallengeTemplates/master/Boilerplate/AzureDisclaimer.md" data-name=""><blockquote class="note">
+  <p>Azure is a dynamic, constantly evolving environment. As you complete your challenge lab, you may find that the provided guidance is not identical to what you encounter in the Azure environment. If you encounter a difference between Azure and the challenge lab instructions, please let us know by submitting feedback directly to <a href="mailto:challengefeedback@learnondemandsystems.com?Subject=LODS%20Challenge%20Feedback%20for%20Lab%2069760" target="_top">challengefeedback@learnondemandsystems.com</a>
+  so that we may update the content in as timely a manner as possible.</p>
+</blockquote></include><p></p>
+<h1 id="export-an-azure-resource-manager-template-by-using-the-azure-portal">Export an Azure Resource Manager template by using the Azure portal</h1>
+<ul>
+<li><p>Sign in to the Azure portal as <span class="copyable" title="Copy to clipboard" tabindex="0" role="button">Admin-12811506@cloudslice.onmicrosoft.com</span> using <span class="copyable" title="Copy to clipboard" tabindex="0" role="button">BBd10#h!eD</span> as the password.</p>
+<blockquote class="hint">
+  <p>Select the <span class="copyable" title="Copy to clipboard" tabindex="0" role="button">Copy to clipboard</span> icon to copy the text string to the clipboard.</p>
+</blockquote>
+<blockquote class="knowledge">
+  <p>A cloud slice is a portion of an Azure subscription that has been assigned to a user account that was provisioned for you. This provides you with transient, <em>just-enough</em> access to Azure so that you can learn the concepts in this challenge.</p>
+</blockquote><div class="moreKnowledge"><a href="https://labclient.labondemand.com/Instructions/a52e0ae9-b4ca-42ff-b713-a729886e8d43#" class="moreKnowledgeLink" style="display: none;">more...</a></div></li>
+<li><p>Export a new Azure Resource Manager (ARM) template based on the <strong>sa12811506</strong> storage account to your local computer by using the Azure portal.</p>
+<blockquote class="hint">
+  <p></p><details>
+  <summary>Expand this hint for guidance on exporting an ARM template.</summary><p></p>
+  <ul>
+  <li><p>On the Azure home page, select <strong>Storage accounts</strong>, and then select <strong>sa12811506</strong>.</p></li>
+  <li><p>On the sa12811506 resource menu, in Settings, select <strong>Export template</strong>.</p></li>
+  <li><p>On the Export template page, on the command bar, select <strong>Download</strong>.</p></li>
+  <li><p>Review the template structure, and then download the file to your local computer.</p></li></ul>
+  <p></p></details>  <p></p>
+</blockquote>
+<blockquote class="note">
+  <p>The sa12811506 storage account was created for you during the setup of this challenge.  If you do not see the storage account, wait a few minutes, and then refresh the portal.</p>
+  <p>The process of downloading an ARM template to your local computer will vary depending on the browser you use. The exported .zip file will contain two .json files that include the ARM template and the parameters used by the template.  </p>
+  <p>
+  <img src="./AZ900 - 001_ Manage Azure Resource Deployment by Using an Azure Resource Manager Template [Guided]_files/se885p7h.jpg" alt="se885p7h.jpg"></p>
+</blockquote>
+<blockquote class="knowledge collapsed">
+  <p><a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/" target="_blank">Azure Resource Manager (ARM)</a> is responsible for managing deployment and management services for Azure.  ARM gives you a consistent management layer for creating, updating, and deleting resources, and it supports the use of <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/overview" target="_blank">templates</a> for automated deployments.</p>
+  <p>ARM templates are <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/template-syntax" target="_blank">JavaScript Object Notation (JSON)</a> files that you can create by using the <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/quickstart-create-templates-use-the-portal" target="_blank">Azure portal</a> or any JSON editor—for example, <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/quickstart-create-templates-use-visual-studio-code?tabs=CLI" target="_blank">Visual Studio Code</a>.  You can <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/template-tutorial-create-first-template?tabs=azure-powershell" target="_blank">create a template from scratch</a>, or you can edit an existing <a href="https://azure.microsoft.com/en-us/resources/templates/" target="_blank">Azure Quickstart</a> template, and then save it as a new template.  </p>
+  <p>After you create a template, you can deploy it to Azure by using the Azure portal, Visual Studio, the Azure PowerShell® <a href="https://docs.microsoft.com/en-us/powershell/module/az.resources/new-azresourcegroupdeployment?view=azps-3.7.0" target="_blank">New-AzResourceGroupDeployment</a> cmdlet, and the command-line interface (CLI) 2.0 <a href="https://docs.microsoft.com/en-us/cli/azure/group/deployment?view=azure-cli-latest#az-group-deployment-create" target="_blank">az group deployment create</a> command. </p>
+  <p>You can store templates on a local computer or in a repository. Once downloaded, you can edit the template and use it to deploy a new Azure resource.</p>
+</blockquote><div class="moreKnowledge"><a href="https://labclient.labondemand.com/Instructions/a52e0ae9-b4ca-42ff-b713-a729886e8d43#" class="moreKnowledgeLink">more...</a></div></li>
+</ul>
+<h2 id="check-your-work">Check your work</h2>
+<ul class="taskList">
+<li class="task-list-item" id="taskIndex0"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex0"><span></span></label> Confirm that you exported an ARM template by using the Azure portal. </li>
+</ul>
+</div><div class="page" id="page2">
+<h1 id="deploy-an-azure-virtual-machine-by-using-a-custom-arm-template">Deploy an Azure virtual machine by using a custom ARM template</h1>
+<ul>
+<li><p>In a new browser window, deploy the <span class="copyable" title="Copy to clipboard" tabindex="0" role="button">https://github.com/LODSContent/ChallengeLabs_ArmResources/tree/master/ARMTemplates/101-vm-simple-windows</span> template to Azure.</p>
+<blockquote class="hint">
+  <p></p><details>
+  <summary>Expand this hint for guidance on deploying a GitHub template to Azure.</summary><p></p>
+  <ul>
+  <li><p>Open a new browser window, and then go to <span class="copyable" title="Copy to clipboard" tabindex="0" role="button">https://github.com/LODSContent/ChallengeLabs_ArmResources/tree/master/ARMTemplates/101-vm-simple-windows</span>.</p></li>
+  <li><p>Review the information on the Very simple deployment of a Windows VM page, and then select <strong>Deploy to Azure</strong>.</p>
+  <p>
+  <img src="./AZ900 - 001_ Manage Azure Resource Deployment by Using an Azure Resource Manager Template [Guided]_files/p8pmif36.jpg" alt="p8pmif36.jpg"></p></li>
+  <li><p>Verify that the Custom deployment page is authenticated to your <strong>Admin-12811506@cloudslice.onmicrosoft.com</strong> account.</p>
+  <p>
+  <img src="./AZ900 - 001_ Manage Azure Resource Deployment by Using an Azure Resource Manager Template [Guided]_files/h5ddamsc.jpg" alt="h5ddamsc.jpg"></p></li></ul>
+  <p></p></details>  <p></p>
+</blockquote>
+<blockquote class="note">
+  <p>The ARM template used in this challenge is stored in a <a href="https://github.com/" target="_blank">GitHub</a> repository.</p>
+</blockquote>
+<blockquote class="knowledge collapsed">
+  <p><a href="https://docs.microsoft.com/en-us/azure/virtual-machines/windows/" target="_blank">Virtual machines</a> are one of the most frequently deployed resources in Azure. When your company decides to migrate resources to the cloud, virtual machines can, and often do, replace on-premises servers.  Virtual machines can be generic, containing only an operating system, or they can contain types of servers—for example, SQL Server, Exchange, and SharePoint. You can use pre-created Quickstart images or you can create <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/windows/tutorial-custom-images" target="_blank">custom images</a>. </p>
+  <p>To deploy a virtual machine, you can use the <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-portal" target="_blank">Azure portal</a>, <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-powershell" target="_blank">Azure PowerShell</a> cmdlets, <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-cli" target="_blank">CLI 2.0</a> commands, or <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/overview" target="_blank">ARM</a> templates. Visual Studio and <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/quickstart-create-templates-use-visual-studio-code?tabs=CLI" target="_blank">Visual Studio Code</a> are useful for deploying resources by using ARM templates. </p>
+  <p>You should <a href="https://azure.microsoft.com/en-us/pricing/details/virtual-machines/series/" target="_blank">size</a> your Azure virtual machines appropriately to achieve a balance between the desired level of performance and your cost-management goals.</p>
+  <p>When you create a virtual machine, you can use an existing virtual network, or you can create a new virtual network during the deployment process.</p>
+</blockquote><div class="moreKnowledge"><a href="https://labclient.labondemand.com/Instructions/a52e0ae9-b4ca-42ff-b713-a729886e8d43#" class="moreKnowledgeLink">more...</a></div></li>
+<li><p>Edit the <strong>vmName</strong> variable to assign a virtual machine name of <span class="copyable" title="Copy to clipboard" tabindex="0" role="button">MyVM</span>.</p>
+<blockquote class="hint">
+  <p></p><details>
+  <summary>Expand this hint for guidance on editing an ARM template.</summary><p></p>
+  <ul>
+  <li><p>On the Deploy a simple Windows VM blade, select <strong>Edit template</strong>.</p>
+  <p>
+  <img src="./AZ900 - 001_ Manage Azure Resource Deployment by Using an Azure Resource Manager Template [Guided]_files/vryqwswp.jpg" alt="vryqwswp.jpg"></p></li>
+  <li><p>Expand <strong>Variables</strong>, and then select <strong>vmName</strong>.</p>
+  <p>
+  <img src="./AZ900 - 001_ Manage Azure Resource Deployment by Using an Azure Resource Manager Template [Guided]_files/qfleux4e.jpg" alt="qfleux4e.jpg"></p></li>
+  <li><p>In the template editor, on approximately line 61, change the <strong>vmName</strong> value to <span class="copyable" title="Copy to clipboard" tabindex="0" role="button">MyVM</span>, and then select <strong>Save</strong>.</p>
+  <p>
+  <img src="./AZ900 - 001_ Manage Azure Resource Deployment by Using an Azure Resource Manager Template [Guided]_files/5w47fsbd.jpg" alt="5w47fsbd.jpg"></p></li></ul>
+  <p></p></details><p></p>
+</blockquote>
+<blockquote class="knowledge">
+  <p>You can edit existing parameters and variables, and you can also add new resources to the template.  Once the template is edited, you can either download a copy, or you can immediately deploy a new resource based upon the template.  </p>
+</blockquote><div class="moreKnowledge"><a href="https://labclient.labondemand.com/Instructions/a52e0ae9-b4ca-42ff-b713-a729886e8d43#" class="moreKnowledgeLink" style="display: none;">more...</a></div></li>
+<li><p>Deploy the template by using the values in the following table:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">Property</th>
+<th style="text-align:left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">Resource group</td>
+<td style="text-align:left;"><strong>AZ900RGlod12811506</strong></td>
+</tr>
+<tr>
+<td style="text-align:left;">Admin Username</td>
+<td style="text-align:left;"><span class="copyable" title="Copy to clipboard" tabindex="0" role="button">AZ900-Admin</span></td>
+</tr>
+<tr>
+<td style="text-align:left;">Admin Password</td>
+<td style="text-align:left;"><span class="copyable" title="Copy to clipboard" tabindex="0" role="button">AZ900-Passw0rd!</span></td>
+</tr>
+<tr>
+<td style="text-align:left;">Dns Label Prefix</td>
+<td style="text-align:left;"><span class="copyable" title="Copy to clipboard" tabindex="0" role="button">myvm12811506</span></td>
+</tr>
+<tr>
+<td style="text-align:left;">Windows OS Version</td>
+<td style="text-align:left;"><strong>2019-Datacenter</strong></td>
+</tr>
+<tr>
+<td style="text-align:left;">Vm Size</td>
+<td style="text-align:left;"><span class="copyable" title="Copy to clipboard" tabindex="0" role="button">Standard_D2s_v3</span></td>
+</tr>
+</tbody>
+</table>
+<blockquote class="alert">
+  <p>In this challenge, you MUST specify the exact VM size or the deployment will fail.</p>
+</blockquote>
+<blockquote class="hint">
+  <p></p><details>
+  <summary>Expand this hint for guidance on deploying a template.</summary><p></p>
+  <ul>
+  <li><p>On the Custom deployment blade, in Resource group, select <strong>AZ900RGlod12811506</strong>.</p></li>
+  <li><p>In Admin Username, enter <span class="copyable" title="Copy to clipboard" tabindex="0" role="button">AZ900-Admin</span>.</p></li>
+  <li><p>In Admin Password, enter <span class="copyable" title="Copy to clipboard" tabindex="0" role="button">AZ900-Passw0rd!</span>.</p></li>
+  <li><p>In Dns Label Prefix, enter <span class="copyable" title="Copy to clipboard" tabindex="0" role="button">myvm12811506</span>.</p></li>
+  <li><p>In Windows OS Version, select <strong>2019-Datacenter</strong>. </p></li>
+  <li><p>In Vm Size, enter <span class="copyable" title="Copy to clipboard" tabindex="0" role="button">Standard_D2s_v3</span> to replace the default value.</p></li>
+  <li><p>Select <strong>I agree to the terms and conditions stated above</strong>, and then select <strong>Purchase</strong>.</p>
+  <p>
+  <img src="./AZ900 - 001_ Manage Azure Resource Deployment by Using an Azure Resource Manager Template [Guided]_files/nopi5tz6.jpg" alt="nopi5tz6.jpg"></p></li></ul>
+  <p></p></details> <p></p>
+</blockquote></li>
+</ul>
+<h2 id="check-your-work-1">Check your work</h2>
+<ul class="taskList">
+<li class="task-list-item" id="taskIndex1"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex1"><span></span></label> Confirm that you deployed an Azure virtual machine by using a custom ARM template. </li>
+</ul>
+</div><div class="page" id="page3">
+<h1 id="display-the-azure-api-by-using-the-azure-resource-explorer">Display the Azure API by using the Azure Resource Explorer</h1>
+<ul>
+<li><p>Open the Azure <span class="copyable" title="Copy to clipboard" tabindex="0" role="button">Resource Explorer</span> by using the Azure portal.</p>
+<blockquote class="hint">
+  <p></p><details>
+  <summary>Expand this hint for guidance on opening the Azure Resource Explorer.</summary><p></p>
+  <ul>
+  <li><p>On the Azure portal menu, select <strong>All Services</strong>.</p>
+  <p>
+  <img src="./AZ900 - 001_ Manage Azure Resource Deployment by Using an Azure Resource Manager Template [Guided]_files/w5utz3rp.jpg" alt="w5utz3rp.jpg"></p></li>
+  <li><p>Search for <span class="copyable" title="Copy to clipboard" tabindex="0" role="button">Resource</span>, and then select <strong>Resource Explorer</strong>.</p>
+  <p>
+  <img src="./AZ900 - 001_ Manage Azure Resource Deployment by Using an Azure Resource Manager Template [Guided]_files/2yrhaqkq.jpg" alt="2yrhaqkq.jpg"></p></li></ul>
+  <p></p></details>        <p></p>
+</blockquote>
+<blockquote class="knowledge">
+  <p>You can use <a href="https://azure.microsoft.com/en-us/resources/videos/azure-resource-manager-explorer-with-david-ebbo/" target="_blank">Azure Resource Explorer</a> to learn the Azure API, and to determine which resource providers are being used by your Azure account.  You can access the Resource Explorer directly from the <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types" target="_blank">Azure portal</a> or at <a href="https://resources.azure.com/" target="_blank">https://resources.azure.com</a>.</p>
+</blockquote><div class="moreKnowledge"><a href="https://labclient.labondemand.com/Instructions/a52e0ae9-b4ca-42ff-b713-a729886e8d43#" class="moreKnowledgeLink">more...</a></div></li>
+<li><p>Review the list of resource providers that are available to the Azure platform.</p>
+<blockquote class="hint">
+  <p></p><details>
+  <summary>Expand this hint for guidance on reviewing the list of resource providers.</summary><p></p>
+  <ul>
+  <li><p>On the Resource Explorer menu, expand <strong>Providers</strong>, and then review the list of providers.</p>
+  <p>
+  <img src="./AZ900 - 001_ Manage Azure Resource Deployment by Using an Azure Resource Manager Template [Guided]_files/r7d3dnfk.jpg" alt="r7d3dnfk.jpg"></p></li></ul>
+  <p></p></details>        <p></p>
+</blockquote></li>
+<li><p>Review the list of resource providers that are being used by your subscription.</p>
+<blockquote class="hint">
+  <p></p><details>
+  <summary>Expand this hint for guidance on reviewing the list of resource providers that are being used by your subscription.</summary><p></p>
+  <ul>
+  <li><p>On the Resource Explorer menu, expand <strong>Subscriptions</strong>, expand <strong>Providers</strong>, and then view the list of providers that are being used by your subscription.</p>
+  <p>
+  <img src="./AZ900 - 001_ Manage Azure Resource Deployment by Using an Azure Resource Manager Template [Guided]_files/76antdwl.jpg" alt="76antdwl.jpg"></p></li></ul>
+  <p></p></details>        <p></p>
+</blockquote></li>
+<li><p>Review the details of the resources that are deployed to the <strong>AZ900RGlod12811506</strong> resource group.</p>
+<blockquote class="hint">
+  <p></p><details>
+  <summary>Expand this hint for guidance on reviewing the details of the resources in a resource group.</summary><p></p>
+  <ul>
+  <li><p>On the Resource Explorer menu, expand <strong>ResourceGroups</strong>, expand <strong>AZ900RGlod12811506</strong>, expand <strong>Resources</strong>, and then select each resource to view the details provided.</p>
+  <p>
+  <img src="./AZ900 - 001_ Manage Azure Resource Deployment by Using an Azure Resource Manager Template [Guided]_files/qapfzf7e.jpg" alt="qapfzf7e.jpg"></p></li></ul>
+  <p></p></details>        <p></p>
+</blockquote></li>
+</ul>
+<h2 id="check-your-work-2">Check your work</h2>
+<ul class="taskList">
+<li class="task-list-item" id="taskIndex2"><label class="checkbox"><input type="checkbox" aria-labelledby="taskIndex2"><span></span></label> Confirm that you used Azure Resource Explorer to determine which resource providers are available to your subscription and which providers are actually being used.</li>
+</ul>
+</div><div class="page" id="page4">
+<h1 id="summary">Summary</h1>
+<p>Congratulations, you have completed the <strong>Manage Azure Resource Deployment by Using an Azure Resource Manager Template</strong> challenge.</p>
+<p>You have accomplished the following:</p>
+<ul>
+<li>Exported an ARM template by using the Azure portal.</li>
+<li>Deployed an Azure virtual machine by using a custom ARM template.</li>
+<li>Displayed the Azure API by using the Azure Resource Explorer.</li>
+</ul>
+<h2 id="your-feedback-is-important">Your feedback is important!</h2>
+<p>As you end your challenge, please take a few minutes to complete the short survey that will appear in the next window.</p>
+<p>Alternatively, you may provide your feedback directly to <a href="mailto:challengefeedback@learnondemandsystems.com?Subject=LODS%20Challenge%20Feedback%20for%20Lab%2069760" target="_top">challengefeedback@learnondemandsystems.com</a>.</p>
+<h2 id="other-challenges-in-this-series">Other challenges in this series</h2>
+<ul>
+<li>GUIDED CHALLENGE: Manage an Azure Resource Group</li>
+<li>GUIDED CHALLENGE: Run Commands by Using Azure Cloud Shell</li>
+<li>GUIDED CHALLENGE: Create an Azure Function App</li>
+<li>GUIDED CHALLENGE: Create an Azure Logic App</li>
+<li>GUIDED CHALLENGE: Configure an Azure Distributed Denial of Service Protection Plan</li>
+<li>GUIDED CHALLENGE: Manage Encryption by Using an Azure Key Vault</li>
+<li>GUIDED CHALLENGE: Configure Azure Role-Based Access Control</li>
+<li>GUIDED CHALLENGE: Configure an Azure Lock</li>
+<li>GUIDED CHALLENGE: Configure Monitoring by Using Azure Monitor</li>
+<li>GUIDED CHALLENGE: Deploy an Azure Virtual Machine</li>
+<li>GUIDED CHALLENGE: View Azure Service Health Options</li>
+</ul></div></div>
+                </div>
+                <div id="instructionsFooter">
+                    <div id="taskProgressBar" class="progressBar" style="display:none;">
+                        <div id="taskProgressText" class="progressText">0%</div>
+                        <div id="taskProgress" class="progress" style="width:0"></div>
+                    </div>
+                    <div id="instructionsNavigation" role="navigation" aria-label="Previous/Next">
+                        <span id="previous" tabindex="0" role="button" class="noselect">Previous</span>
+                        <span id="next" tabindex="0" role="button" class="noselect">Next</span>
+                    </div>
+                </div>
+            </div>
+            <div id="resourcesTab" class="tab  resources">
+                <div class="tabContent">
+                    <div class="zoomable">
+                        <div id="cloudCredentials"><div class="cloudCredential"><h2>Azure Portal</h2><table class="credentials fields"><tbody><tr><td class="fieldName">URL</td><td><a class="portalLink home" href="https://portal.azure.com/#home">https://portal.azure.com/#home</a></td></tr><tr><td class="fieldName">Subscription</td><td><span class="copyable" title="Copy to clipboard" tabindex="0" role="button">4a5a6077-91a6-4b7a-ae62-a2ed402b1a70</span></td></tr><tr><td class="fieldName">Username</td><td><span class="copyable" title="Copy to clipboard" tabindex="0" role="button">Admin-12811506@cloudslice.onmicrosoft.com</span></td></tr><tr><td class="fieldName">Password</td><td><span class="copyable" title="Copy to clipboard" tabindex="0" role="button">BBd10#h!eD</span></td></tr></tbody></table></div></div>
+                        <div id="cloudResources"><div class="cloudResourceGroup"><h2>Resource Group<div class="description">AZ900RGlod12811506</div></h2></div></div>
+                        <div id="resourcesExtensions"></div>
+                        <div id="containers"></div>
+                        <div id="externalResources"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="helpTab" class="tab  help">
+                <div class="tabContent">
+                    <div class="zoomable">
+
+                            <h2><label for="theme">Theme</label></h2>
+                            <div>
+                                <select id="theme">
+                                        <option value="3" data-name="blue">Blue</option>
+                                        <option value="4" data-name="gray">Gray</option>
+                                        <option value="5" data-name="green">Green</option>
+                                        <option value="6" data-name="orange">Orange</option>
+                                        <option value="7" data-name="purple">Purple</option>
+                                        <option value="8" data-name="red">Red</option>
+                                        <option value="20" data-name="dark">Dark</option>
+                                </select>
+                            </div>
+
+                        <div id="helpExtensions"></div>
+
+                            <h2>ID: 12811506</h2>
+
+                        <ul class="iconLinksList">
+                                <li class="questionIcon">
+                                    <a href="https://docs.learnondemandsystems.com/lod/lab-interface-faq.md" target="_blank">Lab Interface FAQ</a>
+                                    <div class="description">Frequently asked questions about the lab interface.</div>
+                                </li>
+                                <li class="supportIcon">
+                                    <a href="https://supportrequest.learnondemandsystems.com/sf.php?s=123formbuilder-4500904&amp;control48549160=rethaAZ900%40gmail.com&amp;control48584596=Rethabile+Charlotte&amp;control48584598=Kgaile&amp;control49195936=12811506&amp;control49930904=Default+Organization" target="_blank">Submit a Support Request</a>
+                                </li>
+                                <li class="bugIcon">
+                                    <a href="https://labclient.labondemand.com/Instructions/a52e0ae9-b4ca-42ff-b713-a729886e8d43#" id="bugReport">Report a bug</a>
+                                </li>
+                        </ul>
+
+                            <div style="margin-top:20px;">
+                                © 2020 <a href="http://learnondemandsystems.com/" target="_blank">Learn on Demand Systems</a>
+                            </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="notificationContainer" role="region" aria-label="Notifications"></div>
+
+    </div>
+
+    <div id="fullScreenMessage" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="fullScreenMessageTitle" class="withLoadingImage">
+        <div id="fullScreenMessageMask"></div>
+        <div id="fullScreenMessageIcon"></div>
+        <div id="fullScreenMessageCenter" class="baseColor">
+            <div id="fullScreenMessageTextWrapper">
+                <span id="fullScreenMessageLoadingIcon"></span>
+                <div id="fullScreenMessageTitle">Loading your lab content</div>
+                <div id="fullScreenMessageText"></div>
+                <div id="fullScreenMessageButtonWrapper" style="display: none;">
+                    <span id="fullScreenMessageButtons"></span>
+                    <input type="button" id="closeWindow" value="Close Window">
+                </div>
+                <div id="fullScreenProgressWrapper" style="display: none;">
+                    <div id="fullScreenProgressText"></div>
+                    <div id="fullScreenProgressBar">
+                        <div id="fullScreenProgressFill"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<textarea id="copyInput" style="position: absolute; left: -10000px; top: -10000px; display: none;"></textarea>
+
+
+<script>
+    var model = {
+        id: 12811506,
+        key: "a52e0ae9-b4ca-42ff-b713-a729886e8d43",
+        monitor: false,
+        takeControl: false,
+        allowUserTransferSaves: false
+    };
+</script>
+
+
+
+</body></html>
